@@ -1,0 +1,78 @@
+[{
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2013-06-10T17:02:25.098Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$UBuOIKYyGG1A$vsoDJbK7Bc9NuPitZg8CuLCGhK+tW0aIzgTvdbVyjU0=",
+        "email": "admin@admin.com",
+        "date_joined": "2012-11-12T10:45:40.716Z"
+    }
+}, {
+    "pk": 2,
+    "model": "auth.user",
+    "fields": {
+        "username": "test1",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2013-06-10T17:02:25.098Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$UBuOIKYyGG1A$vsoDJbK7Bc9NuPitZg8CuLCGhK+tW0aIzgTvdbVyjU0=",
+        "email": "admin@admin.com",
+        "date_joined": "2012-11-12T10:45:40.716Z"
+    }
+}, {
+    "pk": 3,
+    "model": "auth.user",
+    "fields": {
+        "username": "test2",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2013-06-10T17:02:25.098Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$UBuOIKYyGG1A$vsoDJbK7Bc9NuPitZg8CuLCGhK+tW0aIzgTvdbVyjU0=",
+        "email": "admin@admin.com",
+        "date_joined": "2012-11-12T10:45:40.716Z"
+    }
+}, {
+    "pk": 4,
+    "model": "auth.user",
+    "fields": {
+        "username": "test3",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2013-06-10T17:02:25.098Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$UBuOIKYyGG1A$vsoDJbK7Bc9NuPitZg8CuLCGhK+tW0aIzgTvdbVyjU0=",
+        "email": "admin@admin.com",
+        "date_joined": "2012-11-12T10:45:40.716Z"
+    }
+}, {
+    "model": "customers.Client",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "domain_url": "tenant.com",
+        "schema_name": "public",
+        "name": "cerebro - tenant"
+    }
+}]

@@ -1,0 +1,430 @@
+{% extends 'base.html' %} {% load staticfiles %} 
+
+
+{% block menu %}
+{% include "landingpagemenu.html" %}
+{% endblock menu %}
+
+{% block content %}
+
+<!-- Slider -->
+<section id="feature_slider" class="lol">
+    <!-- 
+            Each slide is composed by <img> and .info
+            - .info's position is customized with css in index.css
+            - each <img> parallax effect is declared by the following params inside its class:
+            
+            example: class="asset left-472 sp600 t120 z3"
+            left-472 means left: -472px from the center
+            sp600 is speed transition
+            t120 is top to 120px
+            z3 is z-index to 3
+            Note: Maintain this order of params
+
+            For the backgrounds, you can combine from the bgs folder :D
+        -->
+    <article class="slide" id="showcasing" style="background: url('../static/img/backgrounds/landscape.png') repeat-x top center;">
+        <img class="asset left-30 sp600 t120 z1" src="../static/img/slides/scene1/macbook.png" />
+        <div class="info">
+            <h2>Beautiful theme for showcasing your works.</h2>
+        </div>
+    </article>
+    <article class="slide" id="ideas" style="background: url('../static/img/backgrounds/aqua.jpg') repeat-x top center;">
+        <div class="info">
+            <h2>We love to turn ideas into beautiful things.</h2>
+        </div>
+        <img class="asset left-480 sp600 t260 z1" src="../static/img/slides/scene2/left.png" />
+        <img class="asset left-210 sp600 t213 z2" src="../static/img/slides/scene2/middle.png" />
+        <img class="asset left60 sp600 t260 z1" src="../static/img/slides/scene2/right.png" />
+    </article>
+    <article class="slide" id="tour" style="background: url('../static/img/backgrounds/color-splash.jpg') repeat-x top center;">
+        <img class="asset left-472 sp650 t210 z3" src="../static/img/slides/scene3/ipad.png" />
+        <img class="asset left-365 sp600 t270 z4" src="../static/img/slides/scene3/iphone.png" />
+        <img class="asset left-350 sp450 t135 z2" src="../static/img/slides/scene3/desktop.png" />
+        <img class="asset left-185 sp550 t220 z1" src="../static/img/slides/scene3/macbook.png" />
+        <div class="info">
+            <h2>Fully Responsive theme</h2>
+            <a href="features.html">TOUR THE PRODUCT</a>
+        </div>
+    </article>
+    <article class="slide" id="responsive" style="background: url('../static/img/backgrounds/indigo.jpg') repeat-x top center;">
+        <img class="asset left-472 sp600 t120 z3" src="../static/img/slides/scene4/html5.png" />
+        <img class="asset left-190 sp500 t120 z2" src="../static/img/slides/scene4/css3.png" />
+        <div class="info">
+            <h2>
+                Responsive
+                <strong>HTML5 & CSS3</strong>
+                Theme
+            </h2>
+        </div>
+    </article>
+</section>
+
+<!-- About Us -->
+<section class="block" id="aboutus">
+    <div class="container">
+        <header>
+            <h2>{{ about_us }}</h2>
+
+            <span class="line"></span>
+        </header>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6 text">
+                <h3>We love to turn ideas into beautiful things.</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some don’t look even slightly believable. If you are going to use a chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of generated Lorem Ipsum is therefore always free from repetition, injected humour or non-characteristic words etc.</p>
+                <a href="#" class="btn btn-gray">Learn more</a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 pull-right img">
+                <img class="img-responsive" src="../static/img/about-circles.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="block gray-block" id="features">
+    <div class="container">
+        <header>
+            <h2>{{ features }}</h2>
+            <span class="line"></span>
+        </header>
+
+        <div class="row">
+            <div class="pic col-xs-12 col-sm-5 col-md-5 col-lg-6">
+                <img class="img-responsive" src="../static/img/feature1.jpg">
+            </div>
+
+            <div class="info col-xs-12 col-sm-7 col-md-7 col-lg-6">
+                <h3>Beautiful on all devices</h3>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+            </div>
+        </div>
+
+        <div class="row to-right">
+            <div class="pic col-xs-12 col-sm-5 col-md-5 col-lg-6">
+                <img class="img-responsive" src="../static/img/feature2.jpg">
+            </div>
+
+            <div class="info col-xs-12 col-sm-7 col-md-7 col-lg-6">
+                <h3>Blog page included</h3>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="pic col-xs-12 col-sm-5 col-md-5 col-lg-6">
+                <img class="img-responsive" src="../static/img/feature3.jpg">
+            </div>
+
+            <div class="info col-xs-12 col-sm-7 col-md-7 col-lg-6">
+                <h3>Simple and clean coming soon page</h3>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="block" id="projects">
+    <div class="container">
+        <header>
+            <h2>{{ recent_projects }}</h2>
+            <span class="line"></span>
+        </header>
+
+        <div class="row">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project">
+                            <a href="#">
+                                <span class="img">
+                                    <img src="../static/img/project.jpg">
+                                    <span class="hover">
+                                        <span>+</span>
+                                    </span>
+                                </span>
+                                <span class="title">Project name</span>
+                            </a>
+                            <p>There arce many variations.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="block gray-block" id="pricing">
+    <div class="container">
+        <header>
+            <h2>{{ pricing }}</h2>
+            <p>See all plans details here</p>
+            <span class="line"></span>
+        </header>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 price-wrapper">
+                <div class="price-box">
+                    <header>
+                        <span>Lite</span>
+                        <div class="price">
+                            <p>$96
+                                <span>Per Month</span>
+                            </p>
+                        </div>
+                    </header>
+
+                    <div class="text">
+                        The pain and trouble that are bound to ensue and equal blame.
+                    </div>
+
+                    <div class="perk">
+                        <div class="content">
+                            <span>20 Pages, Galleries & Blogs</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>250 GB Bandwidth</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>2 GB Storage</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-gray">Order now</a>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 price-wrapper">
+                <div class="price-box price-pro">
+                    <header>
+                        <span>Pro</span>
+                        <div class="price">
+                            <p>$99
+                                <span>Per Month</span>
+                            </p>
+                        </div>
+                    </header>
+
+                    <div class="text">
+                        The pain and trouble that are bound to ensue and equal blame.
+                    </div>
+
+                    <div class="perk">
+                        <div class="content">
+                            <span>50 Pages, Galleries & Blogs</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>800 GB Bandwidth</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>2 GB Storage</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>Mobile Website</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>Publish to Facebook Pages</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-gray">Order now</a>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 price-wrapper">
+                <div class="price-box">
+                    <header>
+                        <span>Basic</span>
+                        <div class="price">
+                            <p>$65
+                                <span>Per Month</span>
+                            </p>
+                        </div>
+                    </header>
+
+                    <div class="text">
+                        The pain and trouble that are bound to ensue and equal blame.
+                    </div>
+
+                    <div class="perk">
+                        <div class="content">
+                            <span>20 Pages, Galleries & Blogs</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>500 GB Bandwidth</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="content">
+                            <span>Mobile Website</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-gray">Order now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Action call -->
+<section class="block gray-block" id="action-call">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-sm-12 col-md-12 col-lg-12 box">
+                <div class="content">
+                    <p>{{ ready_to_start }}</p>
+                    <a href="#" class="btn btn-green">Start Measure now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients -->
+<section class="block gray-block" id="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <header>
+                    <h2>{{ our_clients }}</h2>
+                    <span class="line"></span>
+                </header>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 pull-right">
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 client">
+                    <img class="img-responsive" src="../static/img/client-nike.png">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 client">
+                    <img class="img-responsive" src="../static/img/client-playstation.png">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 client">
+                    <img class="img-responsive" src="../static/img/client-cocacola.png">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 client">
+                    <img class="img-responsive" src="../static/img/client-daftpunk.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

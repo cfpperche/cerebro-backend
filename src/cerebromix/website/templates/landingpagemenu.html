@@ -1,0 +1,102 @@
+{% load staticfiles %}
+
+<header class="navbar navbar-inverse navbar-fixed-top" role="banner" id="header">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand scroller" data-section="body"> <img src="{% static "img/logo.png" %}"> </a>
+		</div>
+
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav">
+				<li>
+					<a class="scroller" data-section="#aboutus">About us</a>
+				</li>
+				<li>
+					<a class="scroller" data-section="#features">Features</a>
+				</li>
+				<li>
+					<a class="scroller" data-section="#projects">Projects</a>
+				</li>
+				<li>
+					<a class="scroller" data-section="#pricing">Pricing</a>
+				</li>
+				<li>
+					<a class="scroller" data-section="#contact">Contact us</a>
+				</li>
+
+				<li>
+					<a href="http://www.mixing.com.br" class="">Blog</a>
+				</li>
+
+				<li class="dropdown">
+					<a class="dropdown-toggle scroller" data-toggle="dropdown">External pages <b class="caret"></b></a>
+
+					<ul class="dropdown-menu">
+						<li>
+							<a href="aboutus.html">About us</a>
+						</li>
+						<li>
+							<a href="faq.html">FAQ</a>
+						</li>
+						<li>
+							<a href="features.html">Features</a>
+						</li>
+						<li>
+							<a href="portfolio.html">Portfolio</a>
+						</li>
+						<li>
+							<a href="coming-soon.html">Coming soon</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact us</a>
+						</li>
+					</ul>
+				</li>
+
+				{% if user.is_authenticated %}
+				<li class="dropdown profile-btn">
+					<a class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{% url 'plans:current_plan' %}">Your account</a>
+						</li>
+						<li>
+							<a href="{% url 'plans:upgrade_plan' %}">Upgrade plan</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="{% url 'plans:order_list' %}">Orders</a>
+						</li>
+						<li>
+							<a href="{% url 'plans:billing_info' %}">Billing data</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="{% url 'customers:signout' %}">Logout</a>
+						</li>
+					</ul>
+				</li>
+				{% else %}
+
+				<li class="sign-btn">
+					<a href="{% url 'plans:pricing' %}">Sign up</a>
+				</li>
+				<li class="sign-btn">
+					<a href="{% url 'customers:signin' %}">Sign in</a>
+				</li>
+				{% endif %}
+				<li class="sign-btn">
+					<a href="{% url 'admin:index' %}">User: {{ user }}</a>
+				</li>
+
+			</ul>
+		</nav>
+	</div>
+</header>
