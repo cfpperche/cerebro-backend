@@ -1,114 +1,120 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Cerebro Mix</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="CerebroMix" />
-    <meta http-equiv='content-Language' content='en-US' />
-    
-    <link type="image/x-icon" href="{% static "favicon.ico" %}" rel="shortcut icon" />
+    <head>
+        <title>Cerebro Mix</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="CerebroMix" />
+        <meta http-equiv='content-Language' content='en-US' />
 
-    <link type="text/css" href="{% static "css/bootstrap/bootstrap.min.css" %}" rel="stylesheet" media="screen" />
-    <link href="{% static "css/vendor/font-awesome.css" %}" rel="stylesheet">
-    <link href="{% static "css/vendor/flexslider.css" %}" rel="stylesheet" media="screen">
+        <link type="image/x-icon" href="{% static "favicon.ico" %}" rel="shortcut icon" />
 
-    <link href="{% static "css/compiled/theme.css" %}" rel="stylesheet" media="screen">
+        <link type="text/css" href="{% static "css/bootstrap/bootstrap.min.css" %}" rel="stylesheet" media="screen" />
+        <link href="{% static "css/vendor/font-awesome.css" %}" rel="stylesheet">
+        <link href="{% static "css/vendor/flexslider.css" %}" rel="stylesheet" media="screen">
 
-    <!-- Style -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href="{% static "css/compiled/theme.css" %}" rel="stylesheet" media="screen">
 
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
-  <![endif]-->
-</head>
+        <!-- Style -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-<body>
+        <!--[if lt IE 9]>
+        <script src="../../assets/js/html5shiv.js"></script>
+        <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+        <![endif]-->
+    </head>
 
-{% block menu %}
-{% endblock menu %}
+    <body>
 
-  <section id="page">
-    <div id="inner-block">
-      <div id="container">
+        {% block menu %}
+        {% endblock menu %}
+
         {% block content %}
         {% endblock content %}
-      </div>
-    </div>
-  </section>
 
-   <!-- Footer -->
-  <footer id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <a href="#">
-            <img class="img-responsive" src= "{% static "img/logo.png" %}">
-          </a>
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <a href="#"> <img class="img-responsive" src= "{% static "img/logo.png" %}"> </a>
 
-          <ul>
-            <li>Rua José Paulino 416 - Sala 403.</li>
-            <li>Campinas - SP. Brasil,</li>
-            <li>CEP, 13013-000.</li>
-            <li class="phone">+55 19 9999-9999</li>
-            <li><a href="#">www.mixing.com</a></li>
-          </ul>
-        </div>
+                        <ul>
+                            <li>
+                                Rua José Paulino 416 - Sala 403.
+                            </li>
+                            <li>
+                                Campinas - SP. Brasil,
+                            </li>
+                            <li>
+                                CEP, 13013-000.
+                            </li>
+                            <li class="phone">
+                                +55 19 9999-9999
+                            </li>
+                            <li>
+                                <a href="#">www.mixing.com</a>
+                            </li>
+                        </ul>
+                    </div>
 
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 pull-right">
-          <h2>Contact Us</h2>
-          <form>
-            <div class="col-sm-6 col-md-6 col-lg-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="City">
-              </div>
+                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 pull-right">
+                        <h2>Contact Us</h2>
+                        <form>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="6" placeholder="Comment"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-green">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>
+                            © 2014 - Bugfix Engineering
+                        </p>
+                    </div>
+                    <div class="col-lg-6 pull-right">
+                        <h6>Social Media</h6>
+                        <div class="social">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="github" href="#"><i class="fa fa-github-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </footer>
 
-            <div class="col-sm-6 col-md-6 col-lg-6">
-              <div class="form-group">
-                <textarea class="form-control" rows="6" placeholder="Comment"></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-green">Send</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <p>© 2014 - Bugfix Engineering </p>
-        </div>
-        <div class="col-lg-6 pull-right">
-          <h6>Social Media</h6>
-          <div class="social">
-            <a class="facebook" href="#"><i class="icon-facebook"></i></a>
-            <a class="twitter" href="#"><i class="icon-twitter"></i></a>
-            <a class="pinterest" href="#"><i class="icon-pinterest"></i></a>
-            <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
-            <a class="gplus" href="#"><i class="icon-google-plus"></i></a>
-            <a class="github" href="#"><i class="icon-github-alt"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-    <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/jquery.flexslider-min.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/index-slider.js"%}"></script>
-</body>
+        <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/jquery.flexslider-min.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/app.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/index-slider.js"%}"></script>
+    </body>
 </html>

@@ -18,16 +18,16 @@
         <dd>{{ userplan.plan }} <a href="{% url 'plans:upgrade_plan' %}">{% trans "upgrade" %}</a></dd>
     </dl>
 
-    <h2>{% trans "Plan details" %}</h2>
+    <h3>{% trans "Plan details" %}</h3>
 
 
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
             {% include "plans/plan_table.html" %}
         </div>
     </div>
 
-    <h1>{% trans "Need more?" %}</h1>
+    <h3>{% trans "Need more?" %}</h3>
 
     {% url 'plans:upgrade_plan' as upgrade_url %}
     {% blocktrans %}

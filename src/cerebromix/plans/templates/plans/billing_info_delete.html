@@ -3,14 +3,14 @@
 {% load url from future %}
 
 {% block body %}
-    <h1>Billing data</h1>
+<h1>Billing data</h1>
 
-    <form method="post" action="{% url 'plans:billing_info_delete' %}">
-        {% csrf_token %}
-        {% trans "Are you sure to delete billing info?" %}
-        <p>
+<form method="post" action="{% url 'plans:billing_info_delete' %}">
+    {% csrf_token %}
+    {% trans "Are you sure to delete billing info?" %}
+    <p>
         <button type="submit" class="btn btn-danger">
-            <span class="glyphicon glyphicon-trash"></span> Confirm delete
+            <i class="fa fa-trash-o"></i> Confirm delete
         </button>
-    </form>
+</form>
 {% endblock %}
